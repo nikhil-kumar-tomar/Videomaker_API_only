@@ -17,9 +17,6 @@ class get_audio_element_serializer(serializers.ModelSerializer):
         return representation
 
 class create_audio_element_serializer(serializers.ModelSerializer):
-    start_time=serializers._(required=True)
-    end_time=serializers._(required=True)
-    type=serializers._
     class Meta:
         model=audio_element
         fields=['id','url','type','start_time','end_time','audio_component_id','video_component_id']
