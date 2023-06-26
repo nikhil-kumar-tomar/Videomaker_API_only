@@ -1,6 +1,4 @@
 from .models import *
-from django.db.models import Q
-from django.conf import settings
 
 def object_exists(factor:dict,model:str):
     """

@@ -20,6 +20,8 @@ from .import views
 urlpatterns = [
     path("get_audio_element/<int:id>/",views.get_audio_element.as_view()),
     path("create_audio_element/",views.create_audio_element.as_view()),
+    path("delete_audio_element/<int:id>/",views.delete_audio_element.as_view()),
+    path("update_audio_element/<int:id>/",views.update_audio_element.as_view()),
     path("upload_audio/",views.audio_upload.as_view()),
     path("upload_video/",views.video_upload.as_view()),
     
