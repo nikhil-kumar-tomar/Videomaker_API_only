@@ -40,6 +40,12 @@ def object_all(model):
     Model is supposed to be passed as a string object like model="User" where User is the name of the model you are refering to
     """
     return eval(model).objects.all()
+def object_all_order_by(model,orderby):
+    """
+    factor is a dictionary {"email":"abc@ghmail.com"} < usage is here, arguments are supposed to be passed like this
+    Model is supposed to be passed as a string object like model="User" where User is the name of the model you are refering to
+    """
+    return eval(model).objects.all().order_by(orderby)
 
 def object_remove(factor:dict,model:str):
     """
