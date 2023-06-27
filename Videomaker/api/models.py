@@ -40,4 +40,4 @@ class audio_element(models.Model):
     video_component_id=models.ForeignKey(video,to_field="id",on_delete=models.CASCADE,null=True)
     date_time=models.DateTimeField(auto_now_add=True)
     def __str__(self) -> str:
-        return f"Audio Component={self.audio_component} ; Audio type={self.type}"
+        return f"Audio Component={self.audio_component_id} ; Audio type={self.type}"

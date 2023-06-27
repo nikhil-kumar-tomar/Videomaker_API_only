@@ -60,13 +60,22 @@ class update_audio_element(generics.UpdateAPIView):
             return Response(serializer.data,status=status.HTTP_200_OK)
         else:
             return Response("Not Found",status=status.HTTP_404_NOT_FOUND)
-
+# For getting audio fragments
+class get_audio_fragments(APIView):
+    serializer_class=audio_fragments_serializer
+    def post(self,request,*args, **kwargs):
+        serializer=audio_fragments_serializer(data=request.data)
+        if serializer.is_valid():
+            return Response(serializer.data,status=status.HTTP_200_OK)
+        else:
+            return Response("Not Found",status=status.HTTP_404_NOT_FOUND)
 
 # API's below are not asked in the assignment, They are created purely for more functionality.
 # Audio Upload created only for reference to other elements 
 class audio_upload(APIView): # EXPERIMENTAL
+    serializer_class=audio_serializer
     def post(self,request,*args, **kwargs):
-        serializer=audio_serializer(data=request.data)
+        serializer=self.get_serializer(data=request.data)
         if serializer.is_valid():
             try:
                 serializer.save()
@@ -81,8 +90,9 @@ class audio_upload(APIView): # EXPERIMENTAL
 
 # Video Upload created only for reference to other elements
 class video_upload(APIView): # EXPERIMENTAL
+    serializer_class=video_serializer
     def post(self,request,*args, **kwargs):
-        serializer_class=video_serializer(data=request.data)
+        serializer_class=self.get_serializer(data=request.data)
         if serializer_class.is_valid():
             serializer_class.save()
             return Response(serializer_class.data,status=status.HTTP_201_CREATED)

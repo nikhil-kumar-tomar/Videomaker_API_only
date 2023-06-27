@@ -22,6 +22,8 @@ urlpatterns = [
     path("create_audio_element/",views.create_audio_element.as_view()),
     path("delete_audio_element/<int:id>/",views.delete_audio_element.as_view()),
     path("update_audio_element/<int:id>/",views.update_audio_element.as_view()),
+    path("get_audio_fragments/",views.get_audio_fragments.as_view()),
+    # Experimental APIs Below
     path("upload_audio/",views.audio_upload.as_view()),
     path("upload_video/",views.video_upload.as_view()),
     
