@@ -75,7 +75,7 @@ class get_audio_fragments(APIView):
 class audio_upload(APIView): # EXPERIMENTAL
     serializer_class=audio_serializer
     def post(self,request,*args, **kwargs):
-        serializer=self.get_serializer(data=request.data)
+        serializer=audio_serializer(data=request.data)
         if serializer.is_valid():
             try:
                 serializer.save()
@@ -92,7 +92,7 @@ class audio_upload(APIView): # EXPERIMENTAL
 class video_upload(APIView): # EXPERIMENTAL
     serializer_class=video_serializer
     def post(self,request,*args, **kwargs):
-        serializer_class=self.get_serializer(data=request.data)
+        serializer_class=video_serializer(data=request.data)
         if serializer_class.is_valid():
             serializer_class.save()
             return Response(serializer_class.data,status=status.HTTP_201_CREATED)
