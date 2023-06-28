@@ -8,7 +8,7 @@ I am going to define the API's Below:
 
 ### Note:
 
-To utilize any API just use the link [URL]/api/[Name of API]/[parameters if any]/
+To utilize any API just use the link <URL of the website>/api/<Name of APi>/<parameters if any>/
 
 For all cases below I am going to take URL of websites as `localhost` this can change and depends on where is the web app deplyoyed
 
@@ -18,7 +18,7 @@ For all cases below I am going to take URL of websites as `localhost` this can c
 
 This is a api to get the information for the already saved audio elements in the database:
 
-Link: localhost/get_audio_element/[int:id]/
+Link: localhost/get_audio_element/<int:id>/
 
 Also, Get required a `GET` http method to be executed
 
@@ -93,7 +93,7 @@ As you can see the start_time a got affected automatically and shifted our time 
 
 It is simple api to delete a Audio Element
 
-Link: localhost/api/delete_audio_element/[int:id]/
+Link: localhost/api/delete_audio_element/<int:id>/
 
 Also, Delete required a `DELETE` http method to be executed
 
@@ -116,7 +116,7 @@ Rules are list below:
 + If type is non Video type only Audio_Component_id is filled and Video_component_is is null and vice versa
 + If type is video_music changing its video_component_id is not allowed(Required) 
 
-Link: localhost/api/update_audio_element/[int:id]/
+Link: localhost/api/update_audio_element/<int:id>/
 
 Also, Delete required a `PUT` http method to be executed
 example is below:
