@@ -23,7 +23,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = config("DJANGO_SECRET_KEY",default="p83@s1-#+!3vg9dxm99&gndey*(v#*yvv5kqa^&*1#h%lm#cgw")
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['127.0.0.1','localhost']
 CORS_ALLOWED_ORIGINS=["http://127.0.0.1","http://localhost"]
