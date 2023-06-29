@@ -25,7 +25,7 @@ Also, Get required a `GET` http method to be executed
 id is supposed to be passed by the user, this API will return a lot of information about the element which will contain information from URL,volume,duration and more.
 example is below:
 
-example link: localhost/api/get_audio_element/65/
+Accessed Link: http://localhost:8000/api/get_audio_element/65/
 
 ```json
 {
@@ -53,7 +53,9 @@ Link: localhost/api/create_audio_element/
 
 It is required to fill data in for this api in format, example is below
 
-Also, Create required a `POST` http method to be executed 
+Also, Create required a `POST` http method to be executed
+
+Accessed Link: http://localhost:8000/api/create_audio_element/
 ```json
 {
     "type":"vo",
@@ -99,7 +101,7 @@ Also, Delete required a `DELETE` http method to be executed
 
 example is below:
 
-Link accessed: http://localhost:8000/api/delete_audio_element/71/
+Accessed Link: http://localhost:8000/api/delete_audio_element/71/
 
 Return of API
 
