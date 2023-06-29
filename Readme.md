@@ -18,14 +18,14 @@ For all cases below I am going to take URL of websites as `localhost` this can c
 
 This is a api to get the information for the already saved audio elements in the database:
 
-Link: localhost/get_audio_element/[int:id]/
+Link: localhost/api/get_audio_element/[int:id]/
 
 Also, Get required a `GET` http method to be executed
 
 id is supposed to be passed by the user, this API will return a lot of information about the element which will contain information from URL,volume,duration and more.
 example is below:
 
-example link: localhost/get_audio_element/65/
+example link: localhost/api/get_audio_element/65/
 
 ```json
 {
@@ -49,7 +49,7 @@ This api is for creating a audio element and follows a lot of rules, listed belo
 1. Same audio types are not overlapped and are appended one after another
 2. For video_audio or video_music the duration is required to be filled by the user but it is filled at server side only, and is taken from the video's start and end duration.
 
-Link: create_audio_element/
+Link: localhost/api/create_audio_element/
 
 It is required to fill data in for this api in format, example is below
 
@@ -266,6 +266,7 @@ There are only 2 Experimental API for uploading audio and video to the applicati
 ## Audio Upload API
 
 This API is used to upload Audio to our application
+Link: localhost/api/upload_audio/
 
 It required Input list below:
 
@@ -295,6 +296,8 @@ example Return:
 ## Video Upload API
 
 This API is similar to Audio upload API, instead it is used to upload videos rather than audios to our web applicatoin.
+
+Link: localhost/api/upload_video/
 
 Required Inputs:
 1. start_time
